@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
       </Navigation>
       <Intro>
-        <h1 className={styles.title}>Hey! It's your pal, Stacie.</h1>
+        <h1 className={styles.title}>Hey! It&apos;s your pal, Stacie.</h1>
         <PersonalImage
           src="/stacie-hat.png"
           alt="stacie in a coffee shot in a hat"
