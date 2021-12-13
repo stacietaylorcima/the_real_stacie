@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import styled from "@emotion/styled";
 import { mediaQueries } from "../styles/mediaQueries";
+import { AboutMe } from "../components/AboutMe";
 
 const Home: NextPage = () => {
   return (
@@ -24,13 +24,20 @@ const Home: NextPage = () => {
           <NavLink>Other</NavLink>
         </LinkWrapper>
       </Navigation>
-      <Intro>
+      <HeroBlock>
         <PersonalImage
           src="/stacie_family.jpg"
           alt="stacie in a coffee shot in a hat"
         />
-        <H1>building a kinder tech.</H1>
-      </Intro>
+        <TextBlock>
+          <H1>building a kinder tech.</H1>
+          <p>
+           I am a fierce advocate for early-career developers and work hard to dismantle the barriers experienced by people who have been systematically marginalized in tech — all while and leaving a notable trail of good vibes and kindness along the way.
+          </p>
+          <Button>About me</Button>
+        </TextBlock>
+      </HeroBlock>
+      <AboutMe />
     </Container>
   );
 };
@@ -44,7 +51,7 @@ const Navigation = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
-  padding: 20px 60px;
+  padding: 20px 35px;
   position: absolute;
   top: 0;
   left: 0;
@@ -57,7 +64,6 @@ const LinkWrapper = styled.div`
 `;
 
 const NavLink = styled.a`
-  font-family: Avenir, sans-serif;
   text-transform: uppercase;
   padding: 20px;
 `;
@@ -76,10 +82,25 @@ const Logo = styled.div`
   border-radius: 50%;
 `;
 
+const HeroBlock = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+`;
+
+const PersonalImage = styled.img`
+  width: 100%;
+  filter: opacity(80%);
+`;
+
+const TextBlock = styled.div`
+  padding: 25px;
+`;
+
 const H1 = styled.h1`
   font-size: 50px;
   font-family: Tiempos Headline, Georgia, serif;
-  padding: 50px;
   ${mediaQueries.tablet} {
     font-size: 100px;
   }
@@ -88,22 +109,14 @@ const H1 = styled.h1`
     font-size: 100px;
   }
 `;
-const Intro = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  margin-bottom: 20px;
-  position: relative;
+
+const Button = styled.div`
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  padding: 16px;
+  width: 200px;
+  text-align: center;
 `;
 
-const PersonalImage = styled.img`
-  width: 100%;
-  filter: opacity(70%);
-`;
-
-const Icon = styled.img`
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-`;
 export default Home;

@@ -5,10 +5,18 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
+h1 {
+  margin: 0;
+}
 a {
   color: inherit;
   text-decoration: none;
+  font-family: Avenir, sans-serif;
+}
+
+p {
+  font-family: Avenir, sans-serif;
+  font-size: 20px;
 }
 
 * {
