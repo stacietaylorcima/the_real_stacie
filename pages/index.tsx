@@ -3,6 +3,9 @@ import Head from "next/head";
 import styled from "@emotion/styled";
 import { mediaQueries } from "../styles/mediaQueries";
 import { AboutMe } from "../components/AboutMe";
+import { Connect } from "../components/Connect";
+import { MyWork } from "../components/MyWork";
+import {H1} from "../components/Typography";
 
 const Home: NextPage = () => {
   return (
@@ -19,9 +22,9 @@ const Home: NextPage = () => {
       <Navigation>
         <Logo>S</Logo>
         <LinkWrapper>
-          <NavLink>About</NavLink>
+          <NavLink href="#about-me">About me</NavLink>
           <NavLink>My work</NavLink>
-          <NavLink>Other</NavLink>
+          <NavLink>Connect</NavLink>
         </LinkWrapper>
       </Navigation>
       <HeroBlock>
@@ -32,12 +35,19 @@ const Home: NextPage = () => {
         <TextBlock>
           <H1>building a kinder tech.</H1>
           <p>
-           I am a fierce advocate for early-career developers and work hard to dismantle the barriers experienced by people who have been systematically marginalized in tech — all while and leaving a notable trail of good vibes and kindness along the way.
+            I am a fierce advocate for early-career developers and work hard to
+            dismantle the barriers experienced by people who have been
+            systematically marginalized in tech — all while and leaving a
+            notable trail of good vibes and kindness along the way.
           </p>
-          <Button>About me</Button>
+          <a href={"#about-me"}>
+            <Button>About me</Button>
+          </a>
         </TextBlock>
       </HeroBlock>
       <AboutMe />
+      <MyWork />
+      <Connect />
     </Container>
   );
 };
@@ -96,18 +106,6 @@ const PersonalImage = styled.img`
 
 const TextBlock = styled.div`
   padding: 25px;
-`;
-
-const H1 = styled.h1`
-  font-size: 50px;
-  font-family: Tiempos Headline, Georgia, serif;
-  ${mediaQueries.tablet} {
-    font-size: 100px;
-  }
-
-  ${mediaQueries.desktop} {
-    font-size: 100px;
-  }
 `;
 
 const Button = styled.div`

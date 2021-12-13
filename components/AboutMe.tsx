@@ -1,10 +1,11 @@
 import styled from "@emotion/styled";
 import { mediaQueries } from "../styles/mediaQueries";
+import { H2 } from "./Typography";
 
 export const AboutMe = () => {
   return (
     <Outer>
-      <H2>more about me.</H2>
+      <H2 id="about-me">more about me.</H2>
       <Grid>
         <div>
           <Paragraph>
@@ -63,19 +64,6 @@ const Outer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 50px;
-`;
-
-const H2 = styled.h2`
-  font-size: 75px;
-  color: white;
-  font-family: Tiempos Headline, Georgia, serif;
-  ${mediaQueries.tablet} {
-    font-size: 100px;
-  }
-
-  ${mediaQueries.desktop} {
-    font-size: 100px;
-  }
 `;
 
 const Grid = styled.div`
