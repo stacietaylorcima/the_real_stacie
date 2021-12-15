@@ -9,34 +9,37 @@ export const AboutMe = () => {
       <Grid>
         <div>
           <Paragraph>
-            Ice cream jelly beans gummies shortbread jelly jelly-o apple pie.
-            Cotton candy halvah chupa chups cake gummi bears. Toffee halvah
-            sweet roll dessert jujubes jelly-o chocolate cake soufflé bonbon.
-            Tootsie roll chupa chups bear claw jujubes donut cotton candy
-            macaroon apple pie fruitcake. Sesame snaps cake macaroon shortbread
-            powder sugar plum. Macaroon tiramisu danish biscuit ice cream.
-            Brownie pudding biscuit chocolate jelly-o cheesecake bonbon candy
-            canes. Chocolate cake marshmallow cupcake tiramisu powder croissant.
-            Candy canes tart jelly-o donut croissant jelly-o brownie bonbon
-            chupa chups.
+            Hiya, friend! I&#39;m Stacie. I&#39;m an engineer at Zapier, a
+            nobody on Twitter, and the mom of two energetic kids who ask a lot
+            of questions and have taught me a lot about empathy, patience, and
+            unconditional love. I grew up in the midwest but am firmly rooted in
+            California (physically and otherwise.)
           </Paragraph>
           <Paragraph>
-            Pastry halvah lemon drops muffin jelly sesame snaps. Jujubes pudding
-            icing dessert chocolate chupa chups marshmallow halvah. Cotton candy
-            jelly macaroon pie danish toffee. Cheesecake jelly-o cotton candy
-            topping liquorice cake ice cream macaroon oat cake. Bear claw bonbon
-            chocolate bar halvah candy canes sweet roll sweet donut. Jelly chupa
-            chups topping tiramisu croissant gummi bears icing halvah. Pastry
-            croissant muffin fruitcake tiramisu sugar plum brownie cake. Candy
-            canes cupcake macaroon shortbread halvah sweet roll pie bear claw
-            danish. Sweet roll danish topping lollipop croissant wafer jelly
-            beans sugar plum jujubes. Chocolate toffee donut cake cake macaroon
-            oat cake fruitcake tiramisu. Powder marzipan carrot cake gingerbread
-            halvah cheesecake gummies danish biscuit. Lemon drops icing cupcake
-            chocolate topping. Topping donut carrot cake icing jelly beans ice
-            cream oat cake gummies. Toffee macaroon pie chupa chups croissant
-            dragée chocolate bar. Muffin donut oat cake chocolate wafer
-            chocolate cake bonbon chocolate bar caramels.{" "}
+            I know what working in a tech is like, and not just for engineers —
+            I&#39;ve spent time in many corners of tech including support,
+            product management, leadership, and more. These experiences made me
+            deeply passionate about and committed to creating a more diverse and
+            inclusive tech space for everyone.
+          </Paragraph>
+          <Paragraph>
+            That&#39;s why I co-founded{" "}
+            <a href="https://the-collab-lab.codes/">The Collab Lab</a>, a
+            501(c)(3) nonprofit that helps recent bootcamp grads and self-taught
+            developers learn the collaboration side of software development.
+            Participants work on small teams to build a fully-functioning app in
+            eight weeks, working alongside tech professionals and engineers who
+            act as mentors. Since the inception, we&#39;ve onboarded more than
+            140 developers, setting them up for success and supporting them in
+            refining their collaboration skills on software development teams.
+          </Paragraph>
+          <Paragraph>
+            I thrive in spaces where there is a lot of trust, and I work hard to
+            build psychologically safe spaces that allow for high levels of
+            trust in every space I venture into. I love contributing to the
+            greater vision of organizations I work with, and am passionate about
+            creating processes that help teams collaborate to achieve their
+            shared vision.
           </Paragraph>
         </div>
         <ImageGrid>
@@ -63,7 +66,7 @@ const Outer = styled.div`
   background-color: #dccad7;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0 50px;
+  padding: 0 50px 50px 50px;
 `;
 
 const Grid = styled.div`
