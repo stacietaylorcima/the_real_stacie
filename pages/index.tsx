@@ -1,15 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styled from "@emotion/styled";
-import { mediaQueries } from "../styles/mediaQueries";
 import { AboutMe } from "../components/AboutMe";
 import { Connect } from "../components/Connect";
-import { MyWork } from "../components/MyWork";
-import {H1} from "../components/Typography";
+import { H1 } from "../components/Typography";
+import { fireTheConfetti } from "../utilities/confetti";
 
 const Home: NextPage = () => {
   return (
-    <Container>
+    <Outer>
       <Head>
         <title>Stacie Taylor</title>
         <meta
@@ -23,11 +22,11 @@ const Home: NextPage = () => {
         <Logo>S</Logo>
         <LinkWrapper>
           <NavLink href="#about-me">About me</NavLink>
-          <NavLink>My work</NavLink>
           <NavLink>Connect</NavLink>
         </LinkWrapper>
       </Navigation>
       <HeroBlock>
+        <ConfettiContainer id="confettiContainer" />
         <PersonalImage
           src="/stacie_family.jpg"
           alt="stacie in a coffee shot in a hat"
@@ -40,21 +39,16 @@ const Home: NextPage = () => {
             systematically marginalized in tech — all while and leaving a
             notable trail of good vibes and kindness along the way.
           </p>
-          <a href={"#about-me"}>
-            <Button>About me</Button>
-          </a>
+          <Button onClick={fireTheConfetti}>Good vibes only</Button>
         </TextBlock>
       </HeroBlock>
       <AboutMe />
-      <MyWork />
       <Connect />
-    </Container>
+    </Outer>
   );
 };
 
-const Container = styled.div`
-  max-width: 2400px;
-`;
+const Outer = styled.div``;
 
 const Navigation = styled.div`
   align-items: center;
@@ -115,6 +109,18 @@ const Button = styled.div`
   padding: 16px;
   width: 200px;
   text-align: center;
+`;
+
+const ConfettiContainer = styled.div`
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  canvas {
+    width: 100%;
+  }
 `;
 
 export default Home;
