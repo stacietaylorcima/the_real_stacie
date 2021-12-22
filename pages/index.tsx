@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { AboutMe } from "../components/AboutMe";
 import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
+import { mediaQueries } from "../styles/mediaQueries";
 
 const Home: NextPage = () => {
   return (
@@ -21,9 +22,7 @@ const Home: NextPage = () => {
           <Logo>S</Logo>
           <LinkWrapper>
             <NavLink href="#about-me">About me</NavLink>
-            <NavLink href="https://the-collab-lab.codes/">
-              The Collab Lab
-            </NavLink>
+            <NavLink href="https://the-collab-lab.codes/">Collab Lab</NavLink>
           </LinkWrapper>
         </Navigation>
         <Hero />
@@ -51,17 +50,21 @@ const Navigation = styled.div`
 
 const LinkWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   justify-self: right;
 `;
 
 const NavLink = styled.a`
+  font-size: 12px;
   text-transform: uppercase;
   padding: 20px;
+  ${mediaQueries.tablet} {
+    font-size: 20px;
+  }
 `;
 
 const Logo = styled.div`
-  background-color: black;
+  background-color: #00000080;
   color: white;
   padding: 10px;
   font-family: Tiempos Headline, Georgia, serif;

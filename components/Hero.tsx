@@ -8,7 +8,7 @@ export const Hero = () => {
     <Outer>
       <ConfettiContainer id="confettiContainer" />
       <PersonalImage
-        src="/stacie_family.jpg"
+        src="/stacie_family.jpeg"
         alt="Stacie, Mila and Benny on a bench"
       />
       <TextBlock>
