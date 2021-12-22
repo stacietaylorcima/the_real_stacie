@@ -9,58 +9,90 @@ export const AboutMe = () => {
       <ContentContainer>
         <Grid>
           <ImageGrid>
-            <ImageColumn>
-              <Image
-                src="/elopement.jpg"
-                alt="Stacie elopes in Edinburgh"
-                width={500}
-                height={335}
-              />
-              <Image
-                src="/sf.jpg"
-                alt="Golden Gate Bridge"
-                width={500}
-                height={335}
-              />
-              <Image
-                src="/big-charcuterie.jpg"
-                alt="Charcuterie board"
-                width={200}
-                height={780}
-              />
-              <Image
-                src="/cima-kids.jpg"
-                alt="Cima kids"
-                width={200}
-                height={780}
-              />
-            </ImageColumn>
-            <ImageColumn>
-              <Image
-                src="/stacie-silly.jpg"
-                alt="Stacie smiling"
-                width={200}
-                height={780}
-              />
-              <Image
-                src="/coffee-with-david.jpg"
-                alt="Two lattes"
-                width={500}
-                height={335}
-              />
-              <Image
-                src="/mum-in-scotland.jpg"
-                alt="Stacie, David, and Mum toasting in Edinburgh"
-                width={200}
-                height={780}
-              />
-              <Image
-                src="/point-reyes.jpg"
-                alt="Point Reyes California"
-                width={500}
-                height={335}
-              />
-            </ImageColumn>
+            <ImageColumnLeft>
+              <ImageWrapper>
+                <Image
+                  src="/elopement.jpg"
+                  alt="Stacie elopes in Edinburgh"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image
+                  src="/sf.jpg"
+                  alt="Golden Gate Bridge"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image
+                  src="/big-charcuterie.jpg"
+                  alt="Charcuterie board"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image
+                  src="/cima-kids.jpg"
+                  alt="Cima kids"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
+            </ImageColumnLeft>
+            <ImageColumnRight>
+              <ImageWrapper>
+                <Image
+                  src="/stacie-silly.jpg"
+                  alt="Stacie smiling"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image
+                  src="/coffee-with-david.jpg"
+                  alt="Two lattes"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image
+                  src="/mum-in-scotland.jpg"
+                  alt="Stacie, David, and Mum toasting in Edinburgh"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image
+                  src="/point-reyes.jpg"
+                  alt="Point Reyes California"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageWrapper>
+            </ImageColumnRight>
           </ImageGrid>
           <AboutBlock>
             <H2>about me.</H2>
@@ -159,10 +191,25 @@ const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+  height: 1550px;
+  ${mediaQueries.desktop} {
+    height: 1200px;
+  }
 `;
 
-const ImageColumn = styled.div`
+const ImageColumnLeft = styled.div`
   display: grid;
   grid-gap: 10px;
-  grid-auto-rows: min-content;
+  grid-auto-rows: 15% 15% 35% 35%;
+`;
+
+const ImageColumnRight = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-rows: 35% 15% 35% 15%;
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
 `;

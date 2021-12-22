@@ -8,7 +8,13 @@ export const Hero = () => {
   return (
     <Outer>
       <ConfettiContainer id="confettiContainer" />
-      <Image src={"/stacie_family.jpeg"} alt="Stacie, Mila and Benny on a bench" width={1000} height={1450} />
+      <Image
+        src={"/stacie_family.jpeg"}
+        alt="Stacie, Mila and Benny on a bench"
+        width={1000}
+        height={1450}
+        priority={true}
+      />
       <TextBlock>
         <H1>building a kinder tech.</H1>
         <p>
@@ -30,12 +36,7 @@ const Outer = styled.div`
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
-`;
-
-const PersonalImage = styled.img`
-  width: 100%;
-  filter: opacity(80%);
-`;
+`
 
 const TextBlock = styled.div`
   padding: 50px;
