@@ -2,11 +2,13 @@ import { H1 } from "./Typography";
 import { fireTheConfetti } from "../utilities/confetti";
 import styled from "@emotion/styled";
 import { mediaQueries } from "../styles/mediaQueries";
+import Image from 'next/image'
 
 export const Hero = () => {
   return (
     <Outer>
       <ConfettiContainer id="confettiContainer" />
+      <Image src='/stacie_family.jpg' width={150} height={100}/>
       <PersonalImage
         src="/stacie_family.jpg"
         alt="Stacie, Mila and Benny on a bench"
