@@ -2,13 +2,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styled from "@emotion/styled";
 import { AboutMe } from "../components/AboutMe";
-import { Connect } from "../components/Connect";
-import { H1 } from "../components/Typography";
-import { fireTheConfetti } from "../utilities/confetti";
+import { Footer } from "../components/Footer";
+import { Hero } from "../components/Hero";
 
 const Home: NextPage = () => {
   return (
-    <Outer>
+    <>
       <Head>
         <title>Stacie Taylor</title>
         <meta
@@ -17,34 +16,21 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/stars.png" />
       </Head>
-
-      <Navigation>
-        <Logo>S</Logo>
-        <LinkWrapper>
-          <NavLink href="#about-me">About me</NavLink>
-          <NavLink>Connect</NavLink>
-        </LinkWrapper>
-      </Navigation>
-      <HeroBlock>
-        <ConfettiContainer id="confettiContainer" />
-        <PersonalImage
-          src="/stacie_family.jpg"
-          alt="stacie in a coffee shot in a hat"
-        />
-        <TextBlock>
-          <H1>building a kinder tech.</H1>
-          <p>
-            I am a fierce advocate for early-career developers and work hard to
-            dismantle the barriers experienced by people who have been
-            systematically marginalized in tech — all while and leaving a
-            notable trail of good vibes and kindness along the way.
-          </p>
-          <Button onClick={fireTheConfetti}>Good vibes only</Button>
-        </TextBlock>
-      </HeroBlock>
-      <AboutMe />
-      <Connect />
-    </Outer>
+      <Outer>
+        <Navigation>
+          <Logo>S</Logo>
+          <LinkWrapper>
+            <NavLink href="#about-me">About me</NavLink>
+            <NavLink href="https://the-collab-lab.codes/">
+              The Collab Lab
+            </NavLink>
+          </LinkWrapper>
+        </Navigation>
+        <Hero />
+        <AboutMe />
+        <Footer />
+      </Outer>
+    </>
   );
 };
 
@@ -53,7 +39,7 @@ const Outer = styled.div``;
 const Navigation = styled.div`
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: max-content auto;
   place-items: center;
   padding: 20px 35px;
   position: absolute;
@@ -64,6 +50,8 @@ const Navigation = styled.div`
 `;
 
 const LinkWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-self: right;
 `;
 
@@ -84,43 +72,6 @@ const Logo = styled.div`
   justify-self: left;
   height: 75px;
   border-radius: 50%;
-`;
-
-const HeroBlock = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  position: relative;
-`;
-
-const PersonalImage = styled.img`
-  width: 100%;
-  filter: opacity(80%);
-`;
-
-const TextBlock = styled.div`
-  padding: 25px;
-`;
-
-const Button = styled.div`
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  padding: 16px;
-  width: 200px;
-  text-align: center;
-`;
-
-const ConfettiContainer = styled.div`
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-
-  canvas {
-    width: 100%;
-  }
 `;
 
 export default Home;
