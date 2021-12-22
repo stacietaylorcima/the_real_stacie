@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { mediaQueries } from "../styles/mediaQueries";
 import { H2, Paragraph } from "./Typography";
+import Image from "next/image";
 
 export const AboutMe = () => {
   return (
@@ -9,19 +10,56 @@ export const AboutMe = () => {
         <Grid>
           <ImageGrid>
             <ImageColumn>
-              <Image src="elopement.jpg" alt="Stacie elopes in Edinburgh" />
-              <Image src="sf.jpg" alt="Golden Gate Bridge" />
-              <Image src="big-charcuterie.jpg" alt="Charcuterie board" />
-              <Image src="cima-kids.jpg" alt="Cima kids" />
+              <Image
+                src="/elopement.jpg"
+                alt="Stacie elopes in Edinburgh"
+                width={500}
+                height={335}
+              />
+              <Image
+                src="/sf.jpg"
+                alt="Golden Gate Bridge"
+                width={500}
+                height={335}
+              />
+              <Image
+                src="/big-charcuterie.jpg"
+                alt="Charcuterie board"
+                width={200}
+                height={780}
+              />
+              <Image
+                src="/cima-kids.jpg"
+                alt="Cima kids"
+                width={200}
+                height={780}
+              />
             </ImageColumn>
             <ImageColumn>
-              <Image src="stacie-silly.jpg" alt="Stacie smiling" />
-              <Image src="coffee-with-david.jpg" alt="Two lattes" />
               <Image
-                src="mum-in-scotland.jpg"
-                alt="Stacie, David, and Mum toasting in Edinburgh"
+                src="/stacie-silly.jpg"
+                alt="Stacie smiling"
+                width={200}
+                height={780}
               />
-              <Image src="point-reyes.jpg" alt="Point Reyes California" />
+              <Image
+                src="/coffee-with-david.jpg"
+                alt="Two lattes"
+                width={500}
+                height={335}
+              />
+              <Image
+                src="/mum-in-scotland.jpg"
+                alt="Stacie, David, and Mum toasting in Edinburgh"
+                width={200}
+                height={780}
+              />
+              <Image
+                src="/point-reyes.jpg"
+                alt="Point Reyes California"
+                width={500}
+                height={335}
+              />
             </ImageColumn>
           </ImageGrid>
           <AboutBlock>
@@ -127,8 +165,4 @@ const ImageColumn = styled.div`
   display: grid;
   grid-gap: 10px;
   grid-auto-rows: min-content;
-`;
-
-const Image = styled.img`
-  width: 100%;
 `;
