@@ -25,7 +25,7 @@ export const AboutMe = () => {
             </ImageColumn>
           </ImageGrid>
           <AboutBlock>
-            <H2>about me.</H2>
+            <H2 id="about-me">about me.</H2>
             <TextContainer>
               <Paragraph>
                 Hiya, friend! I&#39;m Stacie. I&#39;m an engineer at Zapier, a

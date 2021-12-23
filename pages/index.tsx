@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <title>Stacie Taylor</title>
         <meta
           name="description"
-          content="things about Stacie and the stuff she cares about"
+          content="Here you will find bits about Stacie and the things she cares about."
         />
         <link rel="icon" href="/stars.png" />
       </Head>
