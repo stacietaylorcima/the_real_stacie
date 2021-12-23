@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { mediaQueries } from "../styles/mediaQueries";
 import { H2, Paragraph } from "./Typography";
-import Image from "next/image";
 
 export const AboutMe = () => {
   return (
@@ -9,90 +8,21 @@ export const AboutMe = () => {
       <ContentContainer>
         <Grid>
           <ImageGrid>
-            <ImageColumnLeft>
-              <ImageWrapper>
-                <Image
-                  src="/elopement.jpg"
-                  alt="Stacie elopes in Edinburgh"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </ImageWrapper>
-              <ImageWrapper>
-                <Image
-                  src="/sf.jpg"
-                  alt="Golden Gate Bridge"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </ImageWrapper>
-              <ImageWrapper>
-                <Image
-                  src="/big-charcuterie.jpg"
-                  alt="Charcuterie board"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </ImageWrapper>
-              <ImageWrapper>
-                <Image
-                  src="/cima-kids.jpeg"
-                  alt="Cima kids"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </ImageWrapper>
-            </ImageColumnLeft>
-            <ImageColumnRight>
-              <ImageWrapper>
-                <Image
-                  src="/stacie-silly.jpg"
-                  alt="Stacie smiling"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </ImageWrapper>
-              <ImageWrapper>
-                <Image
-                  src="/coffee-with-david.jpg"
-                  alt="Two lattes"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </ImageWrapper>
-              <ImageWrapper>
-                <Image
-                  src="/mum-in-scotland.jpg"
-                  alt="Stacie, David, and Mum toasting in Edinburgh"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </ImageWrapper>
-              <ImageWrapper>
-                <Image
-                  src="/point-reyes.jpg"
-                  alt="Point Reyes California"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </ImageWrapper>
-            </ImageColumnRight>
+            <ImageColumn>
+              <Image src="elopement.jpg" alt="Stacie elopes in Edinburgh" />
+              <Image src="sf.jpg" alt="Golden Gate Bridge" />
+              <Image src="big-charcuterie.jpg" alt="Charcuterie board" />
+              <Image src="cima-kids.jpeg" alt="Cima kids" />
+            </ImageColumn>
+            <ImageColumn>
+              <Image src="stacie-silly.jpg" alt="Stacie smiling" />
+              <Image src="coffee-with-david.jpg" alt="Two lattes" />
+              <Image
+                src="mum-in-scotland.jpg"
+                alt="Stacie, David, and Mum toasting in Edinburgh"
+              />
+              <Image src="point-reyes.jpg" alt="Point Reyes California" />
+            </ImageColumn>
           </ImageGrid>
           <AboutBlock>
             <H2>about me.</H2>
@@ -191,28 +121,14 @@ const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  height: 600px;
-  ${mediaQueries.tablet} {
-    height: 1475px;
-  }
-  ${mediaQueries.desktop} {
-    height: 1200px;
-  }
 `;
 
-const ImageColumnLeft = styled.div`
+const ImageColumn = styled.div`
   display: grid;
   grid-gap: 10px;
-  grid-auto-rows: 15% 15% 35% 35%;
+  grid-auto-rows: min-content;
 `;
 
-const ImageColumnRight = styled.div`
-  display: grid;
-  grid-gap: 10px;
-  grid-auto-rows: 35% 15% 35% 15%;
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
+const Image = styled.img`
   width: 100%;
 `;
