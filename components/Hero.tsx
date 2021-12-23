@@ -37,6 +37,7 @@ const Outer = styled.div`
 const PersonalImage = styled.img`
   width: 100%;
   filter: opacity(80%);
+  height: auto;
 `;
 
 const TextBlock = styled.div`
