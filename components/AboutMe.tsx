@@ -42,7 +42,7 @@ export const AboutMe = () => {
               </ImageWrapper>
               <ImageWrapper>
                 <Image
-                  src="/cima-kids.jpg"
+                  src="/cima-kids.jpeg"
                   alt="Cima kids"
                   width="100%"
                   height="100%"
@@ -191,7 +191,10 @@ const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  height: 1550px;
+  height: 600px;
+  ${mediaQueries.tablet} {
+    height: 1475px;
+  }
   ${mediaQueries.desktop} {
     height: 1200px;
   }
