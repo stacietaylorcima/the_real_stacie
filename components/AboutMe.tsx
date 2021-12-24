@@ -10,7 +10,7 @@ export const AboutMe = () => {
           <ImageGrid>
             <ImageColumn>
               <Image src="https://cdn.zappy.app/08f58df3f6b611585a2c33f2292b139e.png" alt="Stacie elopes in Edinburgh" />
-              <Image src="https://cdn.zappy.app/b74f3c6d098789fae5ee4baf91534acf.pngg" alt="Golden Gate Bridge" />
+              <Image src="https://cdn.zappy.app/b74f3c6d098789fae5ee4baf91534acf.png" alt="Golden Gate Bridge" />
               <Image src="https://cdn.zappy.app/109f69780c146fde686e8de3ba406e03.png" alt="Charcuterie board" />
               <Image src="https://cdn.zappy.app/ac1e5761f7f19c153dfe61cd5fefc97b.png" alt="Cima kids" />
             </ImageColumn>
