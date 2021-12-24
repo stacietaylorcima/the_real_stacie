@@ -9,19 +9,19 @@ export const AboutMe = () => {
         <Grid>
           <ImageGrid>
             <ImageColumn>
-              <Image src="elopement.jpg" alt="Stacie elopes in Edinburgh" />
-              <Image src="sf.jpg" alt="Golden Gate Bridge" />
-              <Image src="big-charcuterie.jpg" alt="Charcuterie board" />
-              <Image src="cima-kids.jpeg" alt="Cima kids" />
+              <Image src="https://cdn.zappy.app/08f58df3f6b611585a2c33f2292b139e.png" alt="Stacie elopes in Edinburgh" />
+              <Image src="https://cdn.zappy.app/b74f3c6d098789fae5ee4baf91534acf.pngg" alt="Golden Gate Bridge" />
+              <Image src="https://cdn.zappy.app/109f69780c146fde686e8de3ba406e03.png" alt="Charcuterie board" />
+              <Image src="https://cdn.zappy.app/ac1e5761f7f19c153dfe61cd5fefc97b.png" alt="Cima kids" />
             </ImageColumn>
             <ImageColumn>
-              <Image src="stacie-silly.jpg" alt="Stacie smiling" />
-              <Image src="coffee-with-david.jpg" alt="Two lattes" />
+              <Image src="https://cdn.zappy.app/bc4fae0b3fec4a2076f004978f73a133.png" alt="Stacie smiling" />
+              <Image src="https://cdn.zappy.app/692c8449651941a38e5fba196b80a307.png" alt="Two lattes" />
               <Image
-                src="mum-in-scotland.jpg"
+                src="https://cdn.zappy.app/c50ac583eeff3c3d9c6e44e7dd8516a7.png"
                 alt="Stacie, David, and Mum toasting in Edinburgh"
               />
-              <Image src="point-reyes.jpg" alt="Point Reyes California" />
+              <Image src="https://cdn.zappy.app/6702afba98a64f9faf1aa18192b16b70.png" alt="Point Reyes California" />
             </ImageColumn>
           </ImageGrid>
           <AboutBlock>
