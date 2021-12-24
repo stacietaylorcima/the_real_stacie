@@ -8,7 +8,7 @@ export const Hero = () => {
     <Outer>
       <ConfettiContainer id="confettiContainer" />
       <PersonalImage
-        src="/stacie_family.jpeg"
+        src="https://cdn.zappy.app/a90cb33751a19011558c401ab0a8c4cb.png"
         alt="Stacie, Mila and Benny on a bench"
       />
       <TextBlock>
