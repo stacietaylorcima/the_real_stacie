@@ -28,7 +28,7 @@ export const AboutMe = () => {
             <H2 id="about-me">about me.</H2>
             <TextContainer>
               <Paragraph>
-                Hiya, friend! I&#39;m Stacie. I&#39;m an engineering leader at Zapier, a
+                Hiya, friend! I&#39;m Stacie (she/her). I&#39;m an engineering leader at Zapier, a
                 nobody on Twitter, and the mom of two energetic kids who ask a
                 lot of questions and have taught me a lot about empathy,
                 patience, and unconditional love. I grew up in the midwest but
