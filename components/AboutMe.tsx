@@ -50,7 +50,7 @@ export const AboutMe = () => {
                 development. Participants work on small teams to build a
                 fully-functioning app in eight weeks, working alongside tech
                 professionals and engineers who act as mentors. Since the
-                inception, we&#39;ve onboarded more than 252 developers across 3 continents, setting
+                inception, we&#39;ve onboarded more than 252 developers across 4 continents, setting
                 them up for success and supporting them in refining their
                 collaboration skills on software development teams.
               </Paragraph>
