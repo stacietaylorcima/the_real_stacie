@@ -17,15 +17,15 @@ export const Footer = () => {
       <SocialMediaContainer>
           <Quote>take care of each other, okay.</Quote>{" "}
           <SocialMediaIconGrid>
-            <a href="https://twitter.com/the_real_Stacie">
+            <SocialMediaLinkContainer href="https://twitter.com/the_real_Stacie">
               <SocialMediaIcon src="twitter.png" alt="twitter" height={50} />
-            </a>
-            <a href="https://www.linkedin.com/in/therealstacie/">
+            </SocialMediaLinkContainer>
+            <SocialMediaLinkContainer href="https://www.linkedin.com/in/therealstacie/">
               <SocialMediaIcon src="linkedin.png" alt="linkedin" height={50} />
-            </a>
-            <a href="https://www.instagram.com/the_real_stacie/">
+            </SocialMediaLinkContainer>
+            <SocialMediaLinkContainer href="https://www.instagram.com/the_real_stacie/">
               <SocialMediaIcon src="instagram.png" alt="instagram" height={50} />
-            </a>
+            </SocialMediaLinkContainer>
           </SocialMediaIconGrid>
         </SocialMediaContainer>
     </Outer>
@@ -36,14 +36,16 @@ const Outer = styled.div`
   background-color: #000000b5;
   display: grid;
   place-items: center;
-  ${mediaQueries.desktop}{
+  padding: 50px;
+  ${mediaQueries.tablet}{
     grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
 `;
 
 const ContentContainer = styled.div`
   display: grid;
-  padding: 20px;
+  grid-gap: 20px;
   ${mediaQueries.desktop} {
     max-width: 1200px;
     width: 100%;
@@ -53,10 +55,13 @@ const ContentContainer = styled.div`
 const SocialMediaContainer = styled.div`
   display: grid;
   grid-template-rows: 1fr;
+  grid-gap: 20px;
   place-content: center;
   border-style: solid;
   border-color: #FAF9F6;
-  width: 80%;
+  width: 100%;
+  padding: 50px;
+
 `;
 
 const Quote = styled.small`
@@ -69,13 +74,15 @@ const Quote = styled.small`
 const SocialMediaIconGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: max-content;
+  justify-self: cente
   grid-column-gap: 20px;
-  padding-top: 7px;
   ${mediaQueries.desktop} {
-    justify-self: self-end;
     grid-column-end: none;
   }
+`;
+
+const SocialMediaLinkContainer = styled.a`
+  justify-self: center;
 `;
 
 const SocialMediaIcon = styled.img`
