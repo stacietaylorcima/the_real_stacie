@@ -19,9 +19,10 @@ const Home: NextPage = () => {
       </Head>
       <Outer>
         <Navigation>
-          <Logo>S</Logo>
           <LinkWrapper>
-            <NavLink href="#about-me">About me</NavLink>
+            <NavLink href="#about-me">Bio</NavLink>
+            <NavLink href="#about-me">Work</NavLink>
+            <NavLink href="#about-me">Contact</NavLink>
             <NavLink href="https://the-collab-lab.codes/">Collab Lab</NavLink>
           </LinkWrapper>
         </Navigation>
@@ -33,24 +34,22 @@ const Home: NextPage = () => {
   );
 };
 
-const Outer = styled.div``;
+const Outer = styled.div`
+  background-color: #FAF9F6;
+`;
 
 const Navigation = styled.div`
+  background-color: #FAF9F6;
   align-items: center;
-  display: grid;
-  grid-template-columns: max-content auto;
-  place-items: center;
-  padding: 20px 35px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  text-align: center;
+  width: 100%; 
+  position: fixed; 
   z-index: 1;
 `;
 
 const LinkWrapper = styled.div`
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(4, auto);
   justify-self: right;
 `;
 
@@ -61,20 +60,6 @@ const NavLink = styled.a`
   ${mediaQueries.tablet} {
     font-size: 20px;
   }
-`;
-
-const Logo = styled.div`
-  background-color: #00000080;
-  color: white;
-  padding: 10px;
-  font-family: Tiempos Headline, Georgia, serif;
-  font-size: 48px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 75px;
-  justify-self: left;
-  height: 75px;
-  border-radius: 50%;
 `;
 
 export default Home;
