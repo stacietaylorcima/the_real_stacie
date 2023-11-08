@@ -62,13 +62,6 @@ export const AboutMe = () => {
                 and am passionate about creating processes that help teams
                 collaborate to achieve their shared vision.
               </Paragraph>
-              <Paragraph>
-                I am absolutely driven by human connection and always eager to
-                meet a new friend. Hit me up if you ever want to chat about
-                leadership, diversity and inclusion, engineering, parenting,
-                wine & cheese, or really anything femme.
-              </Paragraph>
-              <Paragraph>- Your pal, Stacie</Paragraph>
             </TextContainer>
           </AboutBlock>
         </Grid>

@@ -14,7 +14,7 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  color: #000000b5;
+  color: ${props => props.color ? props.color : '#000000b5'};
   font-size: 35px;
   font-family: Tiempos Headline, Georgia, serif;
   ${mediaQueries.tablet} {
@@ -27,4 +27,5 @@ export const H2 = styled.h2`
 
 export const Paragraph = styled.p`
   margin: 0 0 16px 0;
+  color: ${props => props.color ? props.color : '#000000b5'};
 `;
